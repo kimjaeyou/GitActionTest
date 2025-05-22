@@ -1,20 +1,29 @@
+# .github/workflows/ci.yml
+
 name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
+    - name: Checkout source
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: '16'
-    - run: npm install
-    - run: npm test
-    - name: Build
-      run: npm run build
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run test
+      run: npm test
