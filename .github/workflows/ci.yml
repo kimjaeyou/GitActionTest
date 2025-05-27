@@ -31,7 +31,7 @@ jobs:
 
       - name: Set Dynamic Tag
         id: tag
-        run: echo "TAG=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+        run: echo "TAG=$(date +'%Y%m%d-%H%M%S')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - name: Build & Push Image
         run: |
