@@ -12,7 +12,7 @@ RUN npm install
 COPY . . 
 
 # 5. 포트 오픈
-EXPOSE 135
+EXPOSE 3000
 
 # 6. 실행 명령어
 CMD [ "npm", "start" ]
