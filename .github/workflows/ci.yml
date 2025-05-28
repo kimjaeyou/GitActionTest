@@ -39,6 +39,4 @@ jobs:
           docker tag ${{ secrets.DOCKER_USERNAME }}/my-node-app:$TAG ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/my-node-app:$TAG
           docker push ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
-
-      - name: Save Tag Info to Artifact
-        run: echo $TAG > tag.txt
+          
