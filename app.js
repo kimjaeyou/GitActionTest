@@ -1,3 +1,4 @@
+throw new Error("Forced failure");
 const express = require('express');
 const app = express();
 
