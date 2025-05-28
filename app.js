@@ -1,9 +1,8 @@
-throw new Error("Forced failure");
 const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello CI/CD!!!!!!!!!!!!From GitHub Actions 25/05/28-10:54');
+  res.send('Hello CI/CD!!!!!!!!!!!!From GitHub Actions 25/05/28-12:30');
 });
 
 const PORT = process.env.PORT || 3000;
